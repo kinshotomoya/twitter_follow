@@ -16,10 +16,10 @@ class TwitterService
 
     def get_client
       client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "ghzvww4mSI0icQaPFgydd8CnV"
-        config.consumer_secret     = "ItvBMRot8RQgTRWaSoi2QIpeBWWwiVXLI5fmy7LI4MCw4IG9U9"
-        config.access_token        = "945298659477827585-HqB3DTOA4gyQ0ASjRPr8cBGOsoUiRxy"
-        config.access_token_secret = "tbMiqw4U2ZX5sowao2O16JKtenrPGot93woawAw3lwtxO"
+        config.consumer_key        = ENV["CONSUMER_KEY"]
+        config.consumer_secret     = ENV["CONSUMER_SECRET"]
+        config.access_token        = ENV["ACCESS_TOKEN"]
+        config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
       end
       client
     end
@@ -33,11 +33,9 @@ class TwitterService
     end
 
     def select_unfollower_ids
-      unfollow_array = []
-      @one_side_loves_user_array.each do |friend|
+      @one_side_loves_user_array.map do |friend|
         unfollow_array.push(friend) if @follower_array.exclude?(friend)
       end
-      unfollow_array
     end
 
     def unfollow_users
