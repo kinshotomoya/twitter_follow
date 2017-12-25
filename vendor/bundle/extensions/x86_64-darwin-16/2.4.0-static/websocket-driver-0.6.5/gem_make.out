@@ -1,0 +1,15 @@
+current directory: /Users/jinzhengpengye/work_space/twitter_foolow/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/jinzhengpengye/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20171225-45987-hnym7q.rb extconf.rb
+creating Makefile
+
+current directory: /Users/jinzhengpengye/work_space/twitter_foolow/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/jinzhengpengye/work_space/twitter_foolow/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/jinzhengpengye/work_space/twitter_foolow/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20171225-45987-nx6rm5
